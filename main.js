@@ -64,12 +64,13 @@ function promedioSumatoria(){
     }
     let promedio = sumaValores / cantSumar;
     alert (`El valor total es ${sumaValores} que por la cantidad ingresada(${cantSumar}) da como promedio ${promedio}`);
+    return promedio;
 }
 
 // Ejercicio 4
 function validarNumeroPositivoEntero() {
     let valor = prompt("Ingrese un valor: ");
-    if (!isNaN(valor) && valor >= 0) {
+    if (!isNaN(valor) && valor >= 0) { //Faltar agregar que solo tome valores enteros.
         alert("Perfecto!! Ingresaste un valor valido")
         return true;
     } else {
@@ -77,3 +78,12 @@ function validarNumeroPositivoEntero() {
         return false;
     }
 }
+
+/* 
+Correcciones
+
+>> let numeroPositivo = Number(prompt("Ingrese un número: ")); 
+Poner el ...Number(()); no nos deja ver el dato ingresado ya que el resultado puede dar bien pero no sabemos debido a que
+
+
+*/
